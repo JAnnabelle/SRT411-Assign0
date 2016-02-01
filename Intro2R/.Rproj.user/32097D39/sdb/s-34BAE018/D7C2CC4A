@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"Assign0\"\nauthor: \"JAnnabelle\"\ndate: \"January 31, 2016\"\noutput: html_document\n---\n\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\n```{r}\n(1/19)*100\n```\n\nYou can also embed plots, for example:\n\n```{r}\nyear = 2014\nstart = 2013\nbirth = 1995\nresult = ((year-start)/(year-birth))*100\nresult\n```\n\n```{r}\na = c(4,5,8,11)\nsum(x=a)\n```\n\n```{r}\nb = rnorm(100)\nplot(b)\n```\n\n```{r}\nhelp(\"sqrt\")\n```\n\n```{r}\nP = seq(from=31, to=60, by=1)\nQ = matrix(data=rnorm(30), ncol=5)\n```\n\n```{r}\nx1 = c(rnorm(100))\nx2 = c(rnorm(100))\nx3 = c(rnorm(100))\nt = data.frame(a=x1,b=x1+x2,c=x1+x2+x3)\nplot(t)\n```\n\n```{r}\nx1 = c(rnorm(100))\nx2 = c(rnorm(100))\nx3 = c(rnorm(100))\nt = data.frame(a=x1,b=x1+x2,c=x1+x2+x3)\n\nplot(t$a, type=\"l\", ylim=range(t), lwd=3, col=rgb(1,0,0,0.3))\nlines(t$b, type=\"s\", lwd=2, col=rgb(0.3,0.4,0.3,0.9))\npoints(t$c, pch=20, cex=4, col=rgb(0,0,0.1,0.))\n```\n\n```{r}\nd = read.table(file=\"tst1.txt\", header= TRUE)\nd = data.frame(a=d$a, g=d$g*5, x=d$x)\nwrite.table(d, file=\"tst2.txt\", row.names = FALSE)\n```\n\n```{r}\nmean(sqrt(c(rnorm(100))))\n```\n\n```{r}\ndatex=c(1,2,3)\npresy=c(2,3,2)\nplot(datex,presy)\n```\n\n```{r}\nv=c(rnorm(100))\nfor(i in 1:100)\n{\n  if(v[i] > 90)\n  {v[i]= v[i]*10}\n  else if (v[i] < 5)\n  {v[i]= v[i]*10}\n  else \n  {v[i]= v[i]*0.1}\n}\n```\n\n```{r}\nfunc1 = function(arg1)\n{\n  for(i in length(arg1))\n  {\n    if(arg1[i] > 90)\n    {arg1[i]= arg1[i]*10}\n    else if (v[i] < 5)\n    {arg1[i]= arg1[i]*10}\n    else \n    {arg1[i]= arg1[i]*0.1}\n  }\n}\n```",
+    "created" : 1454281872798.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2553828568",
+    "id" : "D7C2CC4A",
+    "lastKnownWriteTime" : 1454286948,
+    "path" : "E:/Semester 6/SRT411/R Projects/Intro2R/Intro.Rmd",
+    "project_path" : "Intro.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

@@ -1,0 +1,106 @@
+---
+title: "Assign0"
+author: "JAnnabelle"
+date: "January 31, 2016"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+(1/19)*100
+```
+
+You can also embed plots, for example:
+
+```{r}
+year = 2014
+start = 2013
+birth = 1995
+result = ((year-start)/(year-birth))*100
+result
+```
+
+```{r}
+a = c(4,5,8,11)
+sum(x=a)
+```
+
+```{r}
+b = rnorm(100)
+plot(b)
+```
+
+```{r}
+help("sqrt")
+```
+
+```{r}
+P = seq(from=31, to=60, by=1)
+Q = matrix(data=rnorm(30), ncol=5)
+```
+
+```{r}
+x1 = c(rnorm(100))
+x2 = c(rnorm(100))
+x3 = c(rnorm(100))
+t = data.frame(a=x1,b=x1+x2,c=x1+x2+x3)
+plot(t)
+```
+
+```{r}
+x1 = c(rnorm(100))
+x2 = c(rnorm(100))
+x3 = c(rnorm(100))
+t = data.frame(a=x1,b=x1+x2,c=x1+x2+x3)
+
+plot(t$a, type="l", ylim=range(t), lwd=3, col=rgb(1,0,0,0.3))
+lines(t$b, type="s", lwd=2, col=rgb(0.3,0.4,0.3,0.9))
+points(t$c, pch=20, cex=4, col=rgb(0,0,0.1,0.))
+```
+
+```{r}
+d = read.table(file="tst1.txt", header= TRUE)
+d = data.frame(a=d$a, g=d$g*5, x=d$x)
+write.table(d, file="tst2.txt", row.names = FALSE)
+```
+
+```{r}
+mean(sqrt(c(rnorm(100))))
+```
+
+```{r}
+datex=c(1,2,3)
+presy=c(2,3,2)
+plot(datex,presy)
+```
+
+```{r}
+v=c(rnorm(100))
+for(i in 1:100)
+{
+  if(v[i] > 90)
+  {v[i]= v[i]*10}
+  else if (v[i] < 5)
+  {v[i]= v[i]*10}
+  else 
+  {v[i]= v[i]*0.1}
+}
+```
+
+```{r}
+func1 = function(arg1)
+{
+  for(i in length(arg1))
+  {
+    if(arg1[i] > 90)
+    {arg1[i]= arg1[i]*10}
+    else if (v[i] < 5)
+    {arg1[i]= arg1[i]*10}
+    else 
+    {arg1[i]= arg1[i]*0.1}
+  }
+}
+```
